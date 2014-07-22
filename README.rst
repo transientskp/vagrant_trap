@@ -57,9 +57,9 @@ you in `/vagrant/trap_project`. This project takes all data files in
 Running the pipeline
 --------------------
 
-you can modify the configuration to your needs. The easiest way to get started
-is to copy your data files into `/vagrant/vagrant/data` and inside
-`/vagrant/vagrantproject` run::
+There are various ways of running the pipeline, but the easier way is to copy
+you data inside the `vagrant_trap/data` folder on the host and then run::
 
-    $ ./manage.py run vagrantjob
-
+    $ ./run_trap.sh
+    
+on the host.
