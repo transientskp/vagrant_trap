@@ -39,6 +39,8 @@ cd /vagrant/banana
 pip install -r requirements.txt
 cp /vagrant/conf/apache.conf /etc/apache2/sites-enabled/000-default.conf 
 cp /vagrant/conf/banana_settings.py /vagrant/banana/bananaproject/settings/local.py
+cp /vagrant/conf/matplotlibrc /etc/matplotlibrc
+./manage.py syncdb --noinput
 ./manage.py collectstatic --noinput
 service apache2 restart
 
