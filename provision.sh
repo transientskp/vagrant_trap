@@ -1,6 +1,7 @@
 #!/bin/bash -ev
 
 cp /vagrant/conf/profile /home/vagrant/.profile
+cp /vagrant/conf/casarc /home/vagrant/.casarc
 . /home/vagrant/.profile
 
 cp /vagrant/conf/apt.sources.list /etc/apt/sources.list
