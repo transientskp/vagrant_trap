@@ -24,6 +24,17 @@ Download `Virtualbox <https://www.virtualbox.org/>`_ and
 can simply do::
 
     $ sudo apt-get install virtualbox vagrant
+    
+Quickstart
+----------
+
+to get up and running quickly::
+
+    $ git clone https://github.com/transientskp/vagrant_trap
+    $ cd vagrant_trap
+    $ <copy your data to vagrant_trap/data>
+    $ ./run_trap.sh
+    $ open http://localhost:9096
 
 
 Usage
