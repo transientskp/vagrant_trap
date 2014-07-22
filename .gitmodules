@@ -1,0 +1,6 @@
+[submodule "tkp"]
+	path = tkp
+	url = git@github.com:transientskp/tkp.git
+[submodule "banana"]
+	path = banana
+	url = git@github.com:transientskp/banana.git

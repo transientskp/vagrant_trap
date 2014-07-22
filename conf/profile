@@ -1,0 +1,2 @@
+export PATH=/vagrant/tkp/tkp/bin:${PATH}
+export PYTHONPATH=/vagrant/tkp:${PYTHONPATH}
