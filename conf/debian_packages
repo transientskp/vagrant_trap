@@ -6,6 +6,7 @@ python-matplotlib
 python-django
 python-scipy
 python-pygresql
+python-sphinx
 build-essential
 python-pip
 python-numpy

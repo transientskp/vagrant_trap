@@ -22,6 +22,7 @@ make
 make install
 cd ..
 pip install -r requirements.txt
+pip install -r documentation/requirements.txt
 
 ## create trap project
 cd /vagrant/
