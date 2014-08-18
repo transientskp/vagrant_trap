@@ -11,14 +11,18 @@ DEBUG_TOOLBAR_PATCH_SETTINGS = False
 
 SECRET_KEY = "w;lkrjw3ljrd90A*W&#&Q@#(Q@EDMAE<fmsdlfjaowiepoq2ie"
 
-
-DATABASES["vagrant"] = {
-	'ENGINE': 'django.db.backends.postgresql_psycopg2',
-	'HOST': 'localhost',
-	'NAME': 'vagrant',
-	'USER': 'vagrant',
-	'PASSWORD': 'vagrant',
-	'CONSOLE': False, 
+DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': '/var/lib/banana/default.db',
+            },
+        'vagrant': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'HOST': 'localhost',
+            'NAME': 'vagrant',
+            'USER': 'vagrant',
+            'PASSWORD': 'vagrant',
+        }
 }
 
 

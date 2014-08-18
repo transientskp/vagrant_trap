@@ -13,19 +13,12 @@ apt-get update
 cat /vagrant/conf/debian_packages | xargs apt-get install -y -q
 
 ## compile and install trap
-mkdir -p /vagrant/tkp/build
-cd /vagrant/tkp/build
-rm -rf *
-cmake .. -DINSTALL_TKP=OFF
-make clean
-make
-make install
-cd ..
+cd /vagrant/tkp
 pip install -r requirements.txt
 pip install -r documentation/requirements.txt
 
 ## create trap project
-cd /vagrant/
+cd /vagrant
 if [ ! -d trap_project ]; then
     /vagrant/tkp/tkp/bin/tkp-manage.py initproject trap_project
     cd /vagrant/trap_project
@@ -37,12 +30,14 @@ fi
 
 ## setup & configure banana
 cd /vagrant/banana
+mkdir /var/lib/banana
 pip install -r requirements.txt
 cp /vagrant/conf/apache.conf /etc/apache2/sites-enabled/000-default.conf 
 cp /vagrant/conf/banana_settings.py /vagrant/banana/bananaproject/settings/local.py
 cp /vagrant/conf/matplotlibrc /etc/matplotlibrc
 ./manage.py syncdb --noinput
 ./manage.py collectstatic --noinput
+chown -R www-data:www-data  /var/lib/banana
 service apache2 restart
 
 ## setup a database for TRAP
